@@ -1,5 +1,4 @@
 var particles = [];
-var mySound;
 
 function setup(){
     var canvas = createCanvas(windowWidth, windowHeight);

@@ -2,15 +2,13 @@ var particles = [];
 var song;
 
 function preload(){
-    sound = loadSound("assets/Megalovania.mp3");
+    song = loadSound("assets/Megalovania.mp3");
 }
 
 function setup(){
     var canvas = createCanvas(windowWidth, windowHeight);
-    canvas.parent('sketch-holder');
-    sound.play();
-    sound.stop();
-    for(var i = 0; i < 50; i++){
+    canvas.parent('background');
+    for(var i = 0; i < 75; i++){
         particles[i] = {};
         particles[i].x = random() * windowWidth;
         particles[i].y = random() * windowHeight;
@@ -32,7 +30,7 @@ function renderLines(){
     strokeWeight(1);
     for(var i = 0; i < particles.length; i++){
         for(var j = i; j < particles.length; j++){
-            if(dist(particles[i].x, particles[i].y, particles[j].x, particles[j].y) < 80){
+            if(dist(particles[i].x, particles[i].y, particles[j].x, particles[j].y) < 100){
                 line(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
             }
         }
@@ -56,9 +54,11 @@ function updateParticles(){
         particles[i].x -= (pmouseX - mouseX) * pow(particles[i].height,2) * 0.25;
         particles[i].y -= (pmouseY - mouseY) * pow(particles[i].height,2) * 0.25;
         strokeWeight(1);
-        if(dist(particles[i].x, particles[i].y , mouseX, mouseY) < 250){
-            line(particles[i].x,particles[i].y,mouseX,mouseY);
-        }
+
+        //lines connecting to mouse//
+        // if(dist(particles[i].x, particles[i].y , mouseX, mouseY) < 250){
+        //     line(particles[i].x,particles[i].y,mouseX,mouseY);
+        // }
     }
 }
 
@@ -76,4 +76,8 @@ function windowResized(){
         particles[i].x = random()*windowWidth;
         particles[i].y = random()*windowHeight;
     }
+}
+
+function mousePressed(){
+    song.play();
 }

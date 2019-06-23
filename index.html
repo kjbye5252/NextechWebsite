@@ -4,61 +4,76 @@
     <title>Keith Bye</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-    <link href="assets/modesta.css" type="text/css" rel="stylesheet">
-    <style>
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-        }
+    <!-- <link href="assets/modesta.css" type="text/css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="assets/style.css">
 
-        body {
-            padding: 0;
-            margin: 0;
-        }
-    </style>
+    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="libraries/p5.sound.min.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/typewriter.js"></script>
     <script>
         window.onload = function() {
             typeWriter();
         };
+
+        var i = 0;
+
+        function hi() {
+            if (i == 0) {
+
+            }
+        }
     </script>
-    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-    <script language="javascript" type="text/javascript" src="libraries/p5.sound.min.js"></script>
-    <script language="javascript" type="text/javascript" src="assets/sketch.js"></script>
 </head>
 
 <body>
-    <script>
-        var i = 0,
-            j = 0;
-        var txt = 'Keith Bye';
+    <header>
+        <div class="container">
+            <div class="home-button">
+                <a href="index.html"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="portfolio.html">portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("demo").innerHTML = txt.substring(0, i) + txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            } else {
-                blink();
-            }
-        }
-
-        function blink() {
-            j++;
-            if (j % 2 == 1) {
-                document.getElementById("blinker").style.opacity = 0;
-            } else {
-                document.getElementById("blinker").style.opacity = 100;
-            }
-            setTimeout(blink, 500);
-        }
-    </script>
-    <div style="position:absolute; top:0; z-index:-1;" id="sketch-holder">
-
+    <div id="content">
+        <div class="top-block" id="particles">
+            <div id="background">
+            </div>
+            <div class="intro">
+                <h1>
+                    <span id="title"></span><span id="blinker">☃</span>
+                </h1>
+            </div>
+        </div>
+        <section id="boxes">
+            <div class="container">
+                <div class="box">
+                    <img src="assets/images/logo_html.png">
+                    <h3>HTML5 Markup</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non diam eget odio lacinia semper vel eu leo. Suspendisse potenti. Nam </p>
+                </div>
+                <div class="box">
+                    <img src="assets/images/logo_css.png">
+                    <h3>CSS3 Styling</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non diam eget odio lacinia semper vel eu leo. Suspendisse potenti. Nam </p>
+                </div>
+                <div class="box">
+                    <img style="width:200px;;height:200px;" src="assets/images/logo_js.png">
+                    <h3>Javascript</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non diam eget odio lacinia semper vel eu leo. Suspendisse potenti. Nam </p>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="center-object">
-        <h1 class="title" style="font-family:verdana; font-size:600%;text-align:center;width:100%;">
-            <span id="demo"></span><span id="blinker">|</span>
-        </h1>
-    </div>
+
+    <footer>
+
+    </footer>
 </body>

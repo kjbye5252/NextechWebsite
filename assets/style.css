@@ -47,13 +47,14 @@ header nav{
 }
 
 .intro{
+    text-align: center;
     color:#ffffff;
     font-size: 400%;
     font-family: verdana;
-    left: 50%;
+    width:100%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(0,-50%);
 }
 
 #boxes{

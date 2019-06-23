@@ -1,9 +1,16 @@
 var particles = [];
+var song;
+
+function preload(){
+    sound = loadSound("assets/Megalovania.mp3");
+}
 
 function setup(){
     var canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('sketch-holder');
-    for(var i = 0; i < 100; i++){
+    sound.play();
+    sound.stop();
+    for(var i = 0; i < 50; i++){
         particles[i] = {};
         particles[i].x = random() * windowWidth;
         particles[i].y = random() * windowHeight;
@@ -18,13 +25,6 @@ function draw(){
     updateParticles();
     renderLines();
     renderParticles();
-    arrow();
-}
-
-function arrow(){
-    strokeWeight(3);
-    line(windowWidth/2, windowHeight-30, windowWidth/2-20, windowHeight-50);
-    line(windowWidth/2, windowHeight-30, windowWidth/2+20, windowHeight-50);
 }
 
 function renderLines(){
@@ -55,6 +55,10 @@ function updateParticles(){
         }
         particles[i].x -= (pmouseX - mouseX) * pow(particles[i].height,2) * 0.25;
         particles[i].y -= (pmouseY - mouseY) * pow(particles[i].height,2) * 0.25;
+        strokeWeight(1);
+        if(dist(particles[i].x, particles[i].y , mouseX, mouseY) < 250){
+            line(particles[i].x,particles[i].y,mouseX,mouseY);
+        }
     }
 }
 

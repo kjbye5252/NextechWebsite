@@ -8,7 +8,7 @@ function preload(){
 function setup(){
     var canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('background');
-    for(var i = 0; i < 75; i++){
+    for(var i = 0; i < 50; i++){
         particles[i] = {};
         particles[i].x = random() * windowWidth;
         particles[i].y = random() * windowHeight;

@@ -13,7 +13,7 @@ body {
 }
 
 header{
-    width: 105%;
+    width: 100%;
     position: absolute;
     color:#ffffff;
     padding-top: 20px;
@@ -62,8 +62,27 @@ header nav{
 }
 
 #boxes .box{
+    width:30%;
+    height:500px;
     text-align: center;
     float: left;
-    width: 30%;
     padding: 10px;
+}
+
+#background{
+    margin: 0;
+    padding: 0;
+
+}
+
+.top-block{
+    overflow: hidden;
+}
+
+#languages{
+    text-align: center;
+    width:100%;
+    height:150px;
+    background-color:gray;
+    color:white;
 }

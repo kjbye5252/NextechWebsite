@@ -17,29 +17,14 @@ function setup(){
         for(var y = 0; y < 3; y++){
             blocks[x][y] = [];
             for(var z = 0; z < 8; z++){
-                blocks[x][y].push(new block(x*150,y*150,-z*150,img));
+                blocks[x][y].push(new block(x*151,y*151,-z*151,img));
             }
         }
     }
 }
 
 function draw(){
-    if(keyIsDown(87))//w
-        cam.move(0,0,-5);
-    if(keyIsDown(83))//s
-        cam.move(0,0,5);
-    if(keyIsDown(65))//a
-        cam.move(-5,0,0);
-    if(keyIsDown(68))//d
-        cam.move(5,0,0);
-    if(keyIsDown(32))//space
-        cam.move(0,-5,0);
-    if(keyIsDown(16))//shift
-        cam.move(0,5,0);
-    if(mouseIsPressed){
-        cam.pan(-radians(mouseX-pmouseX)/sens);
-        cam.tilt(radians(mouseY-pmouseY)/sens);
-    }
+    updateCamera();
     background(51);
     texture(img);
     for(var x = 0; x < 8; x++){
@@ -61,5 +46,24 @@ function block(x,y,z,texture){
         translate(this.x, this.y, this.z);
         box(150);
         pop();
+    }
+}
+
+function updateCamera(){
+    if(keyIsDown(87))//w
+        cam.move(0,0,-5);
+    if(keyIsDown(83))//s
+        cam.move(0,0,5);
+    if(keyIsDown(65))//a
+        cam.move(-5,0,0);
+    if(keyIsDown(68))//d
+        cam.move(5,0,0);
+    if(keyIsDown(32))//space
+        cam.move(0,-5,0);
+    if(keyIsDown(16))//shift
+        cam.move(0,5,0);
+    if(mouseIsPressed){
+        cam.pan(-radians(mouseX-pmouseX)/sens);
+        cam.tilt(radians(mouseY-pmouseY)/sens);
     }
 }

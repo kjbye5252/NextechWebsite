@@ -1,9 +1,9 @@
 var particles = [];
-// var song;
+var song;
 
-// function preload(){
-//     song = loadSound("assets/Megalovania.mp3");
-// }
+function preload(){
+    song = loadSound("assets/Megalovania.mp3");
+}
 
 function setup(){
     var canvas = createCanvas(windowWidth, windowHeight);
@@ -55,10 +55,10 @@ function updateParticles(){
         particles[i].y -= (pmouseY - mouseY) * pow(particles[i].height,2) * 0.25;
         strokeWeight(1);
 
-        //lines connecting to mouse//
-        // if(dist(particles[i].x, particles[i].y , mouseX, mouseY) < 250){
-        //     line(particles[i].x,particles[i].y,mouseX,mouseY);
-        // }
+        // lines connecting to mouse//
+        if(dist(particles[i].x, particles[i].y , mouseX, mouseY) < 150){
+            line(particles[i].x,particles[i].y,mouseX,mouseY);
+        }
     }
 }
 
@@ -83,6 +83,6 @@ function windowResized(){
     }
 }
 
-// function mousePressed(){
-//     song.play();
-// }
+function mousePressed(){
+    song.play();
+}

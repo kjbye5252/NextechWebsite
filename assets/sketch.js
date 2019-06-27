@@ -1,14 +1,9 @@
 var particles = [];
-var song;
-
-function preload(){
-    song = loadSound("assets/Megalovania.mp3");
-}
 
 function setup(){
     var canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('background');
-    for(var i = 0; i < round((width*height)/4800); i++){
+    for(var i = 0; i < round((width*height)/6800); i++){
         particles[i] = {};
         particles[i].x = random() * windowWidth;
         particles[i].y = random() * windowHeight;
@@ -81,8 +76,4 @@ function windowResized(){
         particles[i].dx = random()-0.5 * particles[i].height;
         particles[i].dy = random()-0.5 * particles[i].height;
     }
-}
-
-function mousePressed(){
-    song.play();
 }

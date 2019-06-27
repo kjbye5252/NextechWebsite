@@ -19,70 +19,75 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="home-button">
-                <a href="index.html"></a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="portfolio.html">portfolio</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div id="content">
-        <div class="top-block">
-            <div id="background">
-            </div>
-            <div class="intro">
-                <h1>
-                    <span id="title"></span><span id="blinker">|</span>
-                </h1>
-            </div>
-        </div>
-
-        <section id="boxes">
-            <div>
-                <div class="box">
-                    <img src="assets/images/logo_html.png">
-                    <h3>HTML5 Markup</h3>
-                    <p>Short for HyperText Markup Language, the authoring language used to create documents on the World Wide Web. HTML defines the structure and layout of a Web document by using a variety of tags and attributes.</p>
-                </div>
-                <div class="box">
-                    <img src="assets/images/logo_css.png">
-                    <h3>CSS3 Styling</h3>
-                    <p>Stands for "Cascading Style Sheet." Cascading style sheets are used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in
-                        a page's HTML.</p>
-                </div>
-                <div class="box">
-                    <img style="width:200px;;height:200px;" src="assets/images/logo_js.png">
-                    <h3>Javascript</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non diam eget odio lacinia semper vel eu leo. Suspendisse potenti. Nam <p>
-                </div>
-                <div class="box">
-                    <img style="width:200px;;height:200px;" src="assets/images/logo_java.png">
-                    <h3>Java</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non diam eget odio lacinia semper vel eu leo. Suspendisse potenti. Nam </p>
-                </div>
-                <div class="box">
-                    <img style="width:200px;;height:200px;" src="assets/images/logo_python.png">
-                    <h3>Python</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non diam eget odio lacinia semper vel eu leo. Suspendisse potenti. Nam </p>
-                </div>
-                <div class="box">
-                    <img style="width:200px;;height:200px;" src="assets/images/logo_p5js2.png">
-                    <h3>P5.js</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non diam eget odio lacinia semper vel eu leo. Suspendisse potenti. Nam </p>
-                </div>
-            </div>
-        </section>
+    <div class="navbar">
+        <a href="#" class="logo">K.B.</a>
+        <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
 
-    <footer>
+    <div class="banner-area" id="home">
+        <div id="background">
+        </div>
+        <h1 class="intro">
+            <span id="title"></span><span id="blinker">|</span>
+        </h1>
+    </div>
 
-    </footer>
+    <div class="about-area" id="about">
+        <div class="text-part">
+            <h1>About Area</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec felis ac urna volutpat dictum. Vestibulum lobortis maximus metus sed cursus. Donec congue nunc purus, id cursus diam suscipit eu. Maecenas quis ultrices leo, nec
+                fringilla dolor. Aenean nulla odio, sagittis eu mattis vel, faucibus et lectus. Phasellus venenatis, velit vel laoreet malesuada, dolor odio ultricies eros, vitae sollicitudin velit nulla at elit. In imperdiet eu nisi eu bibendum.
+                Vivamus sit amet mattis magna, eget dictum elit. Nunc sit amet mollis sapien, sed porta arcu. Donec eget massa sem.</p>
+        </div>
+    </div>
+
+    <div class="portfolio-area" id="portfolio">
+        <div class="port-header">
+            <h1>Portfolio Area</h1>
+        </div>
+        <div class="flex-container">
+            <div class="box">
+                <a class="preview-link" href="#">
+                    <img class="website-preview" src="assets/images/fractalTree.png" alt="">
+                </a>
+                <p>ufdhsduhfg</p>
+            </div>
+            <div class="box">
+                <a class="preview-link" href="#">
+                    <img class="website-preview" src="assets/images/fractalTree.png" alt="">
+                </a>
+                <p>ufdhsduhfg</p>
+            </div>
+            <div class="box">
+                <a class="preview-link" href="#">
+                    <img class="website-preview" src="assets/images/fractalTree.png" alt="">
+                </a>
+                <p>ufdhsduhfg</p>
+            </div>
+            <div class="box">
+                <a class="preview-link" href="#">
+                    <img class="website-preview" src="assets/images/fractalTree.png" alt="">
+                </a>
+                <p>ufdhsduhfg</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-area" id="contact">
+        <div class="text-part">
+            <h1>Contact Area</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec felis ac urna volutpat dictum. Vestibulum lobortis maximus metus sed cursus. Donec congue nunc purus, id cursus diam suscipit eu. Maecenas quis ultrices leo, nec
+                fringilla dolor. Aenean nulla odio, sagittis eu mattis vel, faucibus et lectus. Phasellus venenatis, velit vel laoreet malesuada, dolor odio ultricies eros, vitae sollicitudin velit nulla at elit. In imperdiet eu nisi eu bibendum.
+                Vivamus sit amet mattis magna, eget dictum elit. Nunc sit amet mollis sapien, sed porta arcu. Donec eget massa sem.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>dgfsfjlgkhdsfjgdf gsdhfgk jsdhfkg hdsfgjhdsjfhgjksdh fjkgdskjf gjsdhfjg hjsdkfhg jkdshkjfghksjdf g</p>
+    </div>
 </body>

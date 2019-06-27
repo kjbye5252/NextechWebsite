@@ -6,12 +6,6 @@ body {
     margin: 0;
 }
 
-.container{
-    width:80%;
-    margin: auto;
-    overflow: hidden;
-}
-
 header{
     width: 100%;
     position: absolute;
@@ -44,45 +38,37 @@ header li{
 
 header nav{
     float: right;
+    padding-right: 30px;
 }
 
 .intro{
     text-align: center;
-    color:#ffffff;
+    color: #ffffff;
     font-size: 400%;
     font-family: verdana;
-    width:100%;
+    width: 100%;
     position: absolute;
     top: 50%;
     transform: translate(0,-50%);
-}
-
-#boxes{
-    margin-top: 20px;
-}
-
-#boxes .box{
-    width:30%;
-    height:500px;
-    text-align: center;
-    float: left;
-    padding: 10px;
-}
-
-#background{
-    margin: 0;
-    padding: 0;
-
 }
 
 .top-block{
     overflow: hidden;
 }
 
-#languages{
-    text-align: center;
-    width:100%;
-    height:150px;
-    background-color:gray;
-    color:white;
+.flex-container{
+    display:flex;
+
+}
+
+.box{
+
+}
+
+.preview-link{
+
+}
+
+.website-preview{
+
 }

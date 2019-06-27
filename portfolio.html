@@ -7,9 +7,55 @@
 
     <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
     <script language="javascript" type="text/javascript" src="libraries/p5.sound.min.js"></script>
-    <script language="javascript" type="text/javascript" src="assets/portfolio.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/sketch.js"></script>
+    <script language="javascript" type="text/javascript" src="assets/typeWriter.js"></script>
+    <script>
+        window.onload = function() {
+            typeWriter();
+        };
+    </script>
 </head>
 
 <body>
+    <header>
+        <div class="home-button">
+            <a href="index.html"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <div id="content">
+        <div class="top-block">
+            <div id="background">
+            </div>
+            <div class="intro">
+                <h1>
+                    <span id="title"></span><span id="blinker">|</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="box">
+                <a class="preview-link" href="#">
+                    <img class="website-preview" src="" alt="">
+                </a>
+            </div>
+            <!-- <div class="box">
+                <a class="preview-link" href="#">
+                    <img class="website-preview" src="" alt="">
+                </a>
+            </div> -->
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
 </body>

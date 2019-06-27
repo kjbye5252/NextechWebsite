@@ -1,14 +1,9 @@
 var particles = [];
-var song;
-
-function preload(){
-    song = loadSound("assets/Megalovania.mp3");
-}
 
 function setup(){
     var canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent('background');
-    for(var i = 0; i < 75; i++){
+    for(var i = 0; i < round((width*height)/6800); i++){
         particles[i] = {};
         particles[i].x = random() * windowWidth;
         particles[i].y = random() * windowHeight;
@@ -55,10 +50,10 @@ function updateParticles(){
         particles[i].y -= (pmouseY - mouseY) * pow(particles[i].height,2) * 0.25;
         strokeWeight(1);
 
-        //lines connecting to mouse//
-        // if(dist(particles[i].x, particles[i].y , mouseX, mouseY) < 250){
-        //     line(particles[i].x,particles[i].y,mouseX,mouseY);
-        // }
+        // lines connecting to mouse//
+        if(dist(particles[i].x, particles[i].y , mouseX, mouseY) < 150){
+            line(particles[i].x,particles[i].y,mouseX,mouseY);
+        }
     }
 }
 
@@ -72,12 +67,13 @@ function renderParticles(){
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
-    for(var i = 0; i < particles.length; i++){
-        particles[i].x = random()*windowWidth;
-        particles[i].y = random()*windowHeight;
+    particles = [];
+    for(var i = 0; i < round((width*height)/4800); i++){
+        particles[i] = {};
+        particles[i].x = random() * windowWidth;
+        particles[i].y = random() * windowHeight;
+        particles[i].height = random()*0.5+0.3;
+        particles[i].dx = random()-0.5 * particles[i].height;
+        particles[i].dy = random()-0.5 * particles[i].height;
     }
-}
-
-function mousePressed(){
-    song.play();
 }

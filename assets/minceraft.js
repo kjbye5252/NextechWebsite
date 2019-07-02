@@ -12,11 +12,11 @@ function setup(){
     cam = createCamera();
     cam.move(4*150, -2*150, -4*150);
     blocks = [];
-    for(var x = 0; x < 8; x++){
+    for(var x = 0; x < 16; x++){
         blocks[x] = [];
-        for(var y = 0; y < 3; y++){
+        for(var y = 0; y < 5; y++){
             blocks[x][y] = [];
-            for(var z = 0; z < 8; z++){
+            for(var z = 0; z < 16; z++){
                 blocks[x][y].push(new block(x*151,y*151,-z*151,img));
             }
         }
@@ -27,9 +27,9 @@ function draw(){
     updateCamera();
     background(51);
     texture(img);
-    for(var x = 0; x < 8; x++){
-        for(var y = 0; y < 3; y++){
-            for(var z = 0; z < 8; z++){
+    for(var x = 0; x < 16; x++){
+        for(var y = 0; y < 5; y++){
+            for(var z = 0; z < 16; z++){
                 blocks[x][y][z].draw();
             }
         }

@@ -11,10 +11,24 @@
     <script language="javascript" type="text/javascript" src="libraries/p5.sound.min.js"></script>
     <script language="javascript" type="text/javascript" src="assets/sketch.js"></script>
     <script language="javascript" type="text/javascript" src="assets/typewriter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
         window.onload = function() {
             typeWriter();
         };
+        $(document).ready(function() {
+            var scroll_pos = 0;
+            $(document).scroll(function() {
+                scroll_pos = $(this).scrollTop();
+                console.log(scroll_pos);
+                $('.navbar').css('background-color', 'rgba(0,0,0,' + scroll_pos / 500 + ')')
+                // if (scroll_pos >= 100) {
+                //     $(".navbar").css('background-color', 'rgba(0,0,0,1)');
+                // } else {
+                //     $(".navbar").css('background-color', 'rgba(0,0,0,0)');
+                // }
+            });
+        });
     </script>
 </head>
 
@@ -39,10 +53,10 @@
 
     <div class="about-area" id="about">
         <div class="text-part">
-            <h1>About Area</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec felis ac urna volutpat dictum. Vestibulum lobortis maximus metus sed cursus. Donec congue nunc purus, id cursus diam suscipit eu. Maecenas quis ultrices leo, nec
-                fringilla dolor. Aenean nulla odio, sagittis eu mattis vel, faucibus et lectus. Phasellus venenatis, velit vel laoreet malesuada, dolor odio ultricies eros, vitae sollicitudin velit nulla at elit. In imperdiet eu nisi eu bibendum.
-                Vivamus sit amet mattis magna, eget dictum elit. Nunc sit amet mollis sapien, sed porta arcu. Donec eget massa sem.</p>
+            <h1>About Me</h1>
+            <p>Hey, I'm a 17 year old going into my senior year at Warren Central. My hobbies include running for my cross-country and track team at warren, solving many varirties of rubiks cubes, playing videos game, and watching youtube.
+                I have been on varsity for the cross-country team for all three years that I have ran and I contribute a lot for the team. On the contrary to running, I have been fasinated with technology my entire life and have been coding for
+                just around two years. I even built my own computer last december so that I could code at home and play games.</p>
         </div>
     </div>
 
@@ -181,11 +195,41 @@
         </div>
     </div>
 
-    <div class="contact-area" id="contact">
+    <!-- <div class="contact-area" id="contact">
         <div class="text-part">
             <h1>Contact Area</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec felis ac urna volutpat dictum. Vestibulum lobortis maximus metus sed cursus. Donec congue nunc purus, id cursus diam suscipit eu. Maecenas quis ultrices leo, nec
                 fringilla dolor. Aenean nulla odio, sagittis eu mattis vel, faucibus et lectus. Phasellus venenatis, velit vel lao.</p>
         </div>
-    </div>
+    </div> -->
+
+    <footer class="footer-distributed" id="contact">
+
+        <div class="footer-right">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a href="#banner">Home</a>
+                ·
+                <a href="#about">About</a>
+                ·
+                <a href="#languages">Languages</a>
+                ·
+                <a href="#portfolio">Portfolio</a>
+                ·
+                <a href="#contact">Contact</a>
+            </p>
+
+            <p>Keith Bye &copy; 2019</p>
+        </div>
+
+    </footer>
 </body>
